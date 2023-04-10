@@ -49,7 +49,7 @@ def integer_float_addition():
     x = int(input("Enter an integer you want summed: "))
     y = float(input("Enter an float you want summed: "))
 
-    result = x + y #THE FORMULA
+    result = x + y #the FORMULA
     print(f"The result of {x} plus {y} is {result}\n")
     return result
 
@@ -65,8 +65,8 @@ def change_machine():
     amount = float(input("Enter the amount to return change for (example: $2.95): "))
     amount_cents = round(amount * 100)
 
-    coins = [25, 10, 5]
-    coin_counts = [0, 0, 0]
+    coins = [25, 10, 5] #arr for coins
+    coin_counts = [0, 0, 0] #empty var arr
 
     for i, coin in enumerate(coins):
         coin_counts[i] = amount_cents // coin
@@ -76,32 +76,31 @@ def change_machine():
 
 
 def rock_paper_scissors():
-    choices = ["rock", "paper", "scissors"]
+    choices = ["rock", "paper", "scissors"] #
 
-    user_choice = int(input("Make a choice:\n 1. Rock\n 2. Paper\n 3. Scissors\n")) - 1
+    user_choice = int(input("Make a choice:\n 1. Rock\n 2. Paper\n 3. Scissors\n")) - 1 #Choose "0" it gets better odds 
     ai_choice = random.randint(0, 2)
 
     print(f"You chose {choices[user_choice]}, AI chose {choices[ai_choice]}")
-
+#game logics
     if user_choice == ai_choice:
         print("It's a draw!")
-    elif (user_choice + 1) % 3 == ai_choice:
+    elif (user_choice + 1) % 3 == ai_choice: 
         print("AI wins!")
     else:
         print("You win!")
 
 def mario_wins_level(): 
     stairs = int(input("How many stairs should Mario climb to finish the level?\n"))
-    if stairs <= 0:  #Quality input
+    if stairs <= 0:  #Quality input control
         print("Invalid input. Please provide a positive integer.")
         return
-
-    for i in range(1, stairs + 1):
-        print(" " * (stairs - i) + "#" * (i + 1) + "   |") #for i *#
-    print("#" * (stairs + 1) + "   >") #prints final stairs 
-
-
-
+    
+    print(" " * (stairs) + "  |>") #I couldnt get this figured out and Denis showed me his so credit to him
+    #"pyramid constractor", the only thing Ukranian stole from Russian
+    for i in range(stairs):
+        print(" " * (stairs - i - 1) + "#" * (i + 1) + "  |" )
+#Main menu
 def main():
     while True:
         print("Choose an option:")
@@ -136,11 +135,11 @@ def main():
         elif choice == 9:
             mario_wins_level()
         elif choice == 10:
-            print("Goodbye!")
+            print("Cheers!")
             break
         else:
             print("Invalid choice. Please try again.\n")
 
-if __name__== "__main__":
+if __name__== "__main__": #Def to return to int main unless elif 10 Break!
 
     main()
