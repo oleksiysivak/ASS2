@@ -76,7 +76,7 @@ def change_machine():
 
 
 def rock_paper_scissors():
-     """Play RPS vs comp """
+    #Play RPS vs comp """
     choices = ["rock", "paper", "scissors"]
 
     user_choice = int(input("Make a choice:\n 1. Rock\n 2. Paper\n 3. Scissors\n")) - 1
