@@ -19,7 +19,7 @@ def integer_division_testing():
     return result
 
 def float_cast_to_integer_division_testing():
-    
+    """Calculate the integer quotient of dividend divided by divisor.""" 
     x = float(input("Enter the dividend you want the remainder of: "))
     y = float(input("Enter the divider you want the remainder of: "))
 
@@ -49,7 +49,7 @@ def integer_float_addition():
     x = int(input("Enter an integer you want summed: "))
     y = float(input("Enter an float you want summed: "))
 
-    result = x + y #Self explan
+    result = x + y #THE FORMULA
     print(f"The result of {x} plus {y} is {result}\n")
     return result
 
@@ -76,11 +76,10 @@ def change_machine():
 
 
 def rock_paper_scissors():
-    #Play RPS vs comp """
     choices = ["rock", "paper", "scissors"]
 
     user_choice = int(input("Make a choice:\n 1. Rock\n 2. Paper\n 3. Scissors\n")) - 1
-    ai_choice = random.randint(0, 2) #import random
+    ai_choice = random.randint(0, 2)
 
     print(f"You chose {choices[user_choice]}, AI chose {choices[ai_choice]}")
 

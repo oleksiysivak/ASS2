@@ -3,7 +3,7 @@ def modulo_calculator():
     dividend = int(input("Enter first whole number: "))
     divisor = int(input("Enter the second whole number: "))
     remainder = dividend % divisor   #Should have used z=x%y 
-    print(f"The remainder of {dividend} modulo by {divisor} is {remainder}.")
+    print(f"The remainder of {dividend} modulo by {divisor} is {remainder}.") #"print(f" for passing an argument
 
 
 def integer_division_calculator():
